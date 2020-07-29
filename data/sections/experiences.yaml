@@ -1,0 +1,55 @@
+# section information
+section:
+  name: Experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: Lowe’s Corp.
+    url: "https://www.lowes.com/"
+    location: Mooresville
+    # company overview
+    overview: American retail company specializing in home improvement.
+  positions:
+  - designation: Network Infrastructure Engineer	
+    start: Nov 2019
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Created NocBox Winform app that we use for troubleshooting on a daily basis.
+    - Troubleshoot Routers, Switches, Wireless controllers and APs.
+    - Trained New Hires
+
+
+- company:
+    name: Lowe’s Corp.
+    url: "https://www.lowes.com/"
+    location: Mooresville
+    overview: American retail company specializing in home improvement.
+  positions:
+  - designation: IT Support Analyst	
+    start: May 2018
+    end: Nov 2019
+    responsibilities:
+    - Created an informational HTML/Javascript page for team members
+    - SME for Mobility and Supply Chain for night shift.
+    - Trained New Hires
+
+- company:
+    name: Intern Counting Company (ICC).
+    url: "https://www.lowes.com/"
+    location: Mooresville
+    overview: American retail company specializing in home improvement.
+  positions:
+  - designation: Service Desk Tech
+    start: May 2018
+    end: March 2017
+    responsibilities:
+    - Worked with Putty, Airwatch, ActiveDirectory, and SCCM remote tools.
+    - Provide Informative, Technical, and configuration support on Windows and iOs devices

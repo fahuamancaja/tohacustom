@@ -1,0 +1,43 @@
+# section information
+section:
+  name: Skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: C# .Net Framework
+  icon: "images/skills/csharp.png"
+  summary: "Made various projects based on OOP and interface concepts as well as hierarchical structures."
+
+- name: Entity Framework
+  icon: "images/skills/entity.png"
+  summary: "Recently learned skill. Wrote Code First and Database first programs. Created Hospital Management System based on Code First."
+
+- name: SQLite
+  icon: "images/skills/sqlite.png"
+  summary: "Used in NocBox and WhosThatPokemon project. Was able to learn and utilize SQL commands and Sqlite extension to repurpose for my projects."
+
+- name: PHP
+  icon: "images/skills/php.png"
+  summary: "Created a complete project titled Pokemon Trivia after going through various sources online."
+
+- name: CSS
+  icon: "images/skills/css.png"
+  summary: "Picked up while building PHP project in order to style it and make it available online."
+
+- name: Html
+  icon: "images/skills/html.png"
+  summary: "Used in building online based PHP project. Have a fundamental understanding of structure and usage."
+
+- name: Git
+  icon: "images/skills/git.png"
+  summary: "Experienced with GitHub based development. Mostly, have used Github."
+
+- name: Linux
+  icon: "images/skills/linux.png"
+  summary: "Know basic Linux Rhel Comand Line. Learned in first year of college."

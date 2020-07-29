@@ -1,0 +1,24 @@
+# section information
+section:
+  name: Achievements
+  enable: true
+  weight: 6
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your achievements achievements
+achievements:
+- title: Entity Framework in Depth Certificate of Completion
+  image: images/achievements/presenter.jpg
+  summary: "Udemy Courses taught by Mosh Hamedani Entity Framework in Depth: The Complete Guide"
+- title: C# Advanced Topics Certificate of Completion
+  image: images/achievements/graduation-cap.jpg
+  summary: "Udemy Courses taught by Mosh Hamedani C# Advanced Topics: Prepare for technical interview"
+- title: C# Intermediate Certificate of Completion
+  image: images/achievements/sport.jpg
+  summary: "Udemy Courses taught by Mosh Hamedani C# Intermediate: Classes, Interfaces, and OOP"
+- title: C# Basics for Beginners Certificate of Completion
+  image: images/achievements/woman-winner.jpg
+  summary: "Udemy Courses taught by Mosh Hamedani C# Basics for Beginners: learn C# fundamentals by coding "
+

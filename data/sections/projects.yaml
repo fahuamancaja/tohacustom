@@ -1,0 +1,65 @@
+# section information
+section:
+  name: Projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Networking
+  filter: "networking"
+- name: Hobby
+  filter: "hobby"
+
+# your projects
+projects:
+- name: Hospital Incorporated
+  logo: images/projects/csharp.png
+  role: Developer
+  timeline: "July 2020"
+  repo: https://github.com/fahuamancaja/HospitalIncorporatedManagementSystem # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: C# .Net and Entity Framework project.
+  tags: ["professional", "c#", "entity"]
+
+- name: Subnet Calculator
+  logo: images/projects/csharp.png
+  role: Developer
+  timeline: "July 2020"
+  repo: https://github.com/fahuamancaja/SubnetCalculator
+  #url: ""
+  summary: Tool to find the subnet of a network.
+  tags: ["professional", "C#","networking"]
+
+- name: WhosThatPokemon
+  logo: images/projects/csharp.png
+  role: Developer
+  timeline: "May 2020 - June 2020"
+  repo: https://github.com/fahuamancaja/WhosThatPokemon
+  #url: ""
+  summary: A game made to guess who the pokemon is that is shaded out. 7 Levels of difficulty and 7 generations of Pokemon.
+  tags: ["hobby","fun"]
+
+- name: NocBox
+  logo: images/projects/csharp.png
+  role: Developer
+  timeline: "March 2020 - April 2020"
+  repo: https://github.com/fahuamancaja/NocBox
+  #url: ""
+  summary: An application I packaged to make work more efficient. Other Network Engineers also use application.
+  tags: ["professional", "c#","networking"]
+
+- name: Pokemon_Trivia
+  logo: images/projects/php.png
+  role: Developer
+  timeline: "Jun 2019 - Present"
+  repo: https://github.com/fahuamancaja/Pokemon_Trivia
+  summary: A web based game made to guess who the pokemon is that is shaded out.
+  tags: ["hobby","fun"]
