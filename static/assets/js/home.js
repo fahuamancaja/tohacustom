@@ -407,7 +407,7 @@ var projectCards;
         
           enableScroll();
         }
-        element.addEventListener("click", first, false);
+        elements[i].addEventListener("click", first, false);
       }
     
     }
