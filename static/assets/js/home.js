@@ -369,7 +369,6 @@ var projectCards;
 
 
         
-        this.addEventListener("click", disableScroll, false);
 
 
 
@@ -391,6 +390,7 @@ var projectCards;
       window.removeEventListener('touchmove', preventDefault, wheelOpt);
       window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
+    this.addEventListener("click", disableScroll, false);
 
 
 
