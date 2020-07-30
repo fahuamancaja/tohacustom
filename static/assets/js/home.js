@@ -319,14 +319,15 @@ var projectCards;
         elements[i].onclick = function () {
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
-          
+
           document.body.style.position = 'fixed';
           document.body.style.top = `-${window.scrollY}px`;
           
-          const scrollY = document.body.style.top;
-          document.body.style.position = '';
-          document.body.style.top = '';
-          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+          
+          // const scrollY = document.body.style.top;
+          // document.body.style.position = '';
+          // document.body.style.top = '';
+          // window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
           for (let j = 0; j < len2; j++) {
             achievements[j].classList.toggle("hidden");
@@ -359,6 +360,11 @@ var projectCards;
       adjustSkillCardsHeight();
       adjustRecentPostsHeight();
       showAchievements();
+
+      const scrollY = document.body.style.top;
+          document.body.style.position = '';
+          document.body.style.top = '';
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
     };
   });
 

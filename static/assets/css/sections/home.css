@@ -5,9 +5,7 @@
   color: #f9fafc;
   overflow: hidden;
 }
-body{
-  position: fixed;
-}
+
 .background {
   height: 100%;
   width: 100%;
