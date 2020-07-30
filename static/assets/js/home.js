@@ -316,7 +316,7 @@ var projectCards;
 
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
-      var scroll = true;
+      var scrollMouse = true;
       for (let i = 0; i < len; i++) {
         elements[i].onclick = function () {
           let achievements = document.getElementsByClassName("achievement-entry");
@@ -380,13 +380,13 @@ var projectCards;
             window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
           }
           
-          if(scroll = true){
+          if(scrollMouse = true){
             disableScroll();
-            scroll = false;
+            scrollMouse = false;
           }
-          if(scroll = false){
+          if(scrollMouse = false){
             enableScroll();
-            scroll = true;
+            scrollMouse = true;
           }
         }
       }
