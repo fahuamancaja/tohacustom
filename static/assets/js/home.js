@@ -312,18 +312,40 @@ var projectCards;
         rowNumber++;
       }
 
-      // show full image on click
+      // left: 37, up: 38, right: 39, down: 40,
+      // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+      var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
+      function preventDefault(e) {
+        e.preventDefault();
+      }
+
+      function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+          preventDefault(e);
+          return false;
+        }
+      }
+
+      // modern Chrome requires { passive: false } when adding event
+      var supportsPassive = false;
+      try {
+        window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+          get: function () { supportsPassive = true; } 
+        }));
+      } catch(e) {}
+
+      var wheelOpt = supportsPassive ? { passive: false } : false;
+      var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+
+      // show full image on click
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
-      var scrollMouse = false;
       for (let i = 0; i < len; i++) {
         elements[i].onclick = function first () {
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
-
-          
-
           for (let j = 0; j < len2; j++) {
             achievements[j].classList.toggle("hidden");
           }
@@ -338,33 +360,10 @@ var projectCards;
           if (this.children["enlarge-icon"] != undefined) {
             this.children["enlarge-icon"].classList.toggle("fa-search-plus");
             this.children["enlarge-icon"].classList.toggle("fa-times");
-
           }
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-
-          var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-          function preventDefault(e) {
-            e.preventDefault();
-          }
-
-          function preventDefaultForScrollKeys(e) {
-            if (keys[e.keyCode]) {
-              preventDefault(e);
-              return false;
-            }
-          }
-          var supportsPassive = false;
-          try {
-            window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-              get: function () { supportsPassive = true; } 
-            }));
-          } catch(e) {}
-          
-          var wheelOpt = supportsPassive ? { passive: false } : false;
-          var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
           // call this to Disable
           function disableScroll() {
             window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
@@ -372,25 +371,13 @@ var projectCards;
             window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
             window.addEventListener('keydown', preventDefaultForScrollKeys, false);
           }
-          
-          function enableScroll() {
-            window.removeEventListener('DOMMouseScroll', preventDefault, false);
-            window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-            window.removeEventListener('touchmove', preventDefault, wheelOpt);
-            window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-          }
-          
-          disableScroll();
           this.removeEventListner("click", first, false);
           this.addEventListener("click", second, false);
-
         }
+
         function second () {
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
-
-          
-
           for (let j = 0; j < len2; j++) {
             achievements[j].classList.toggle("hidden");
           }
@@ -405,54 +392,23 @@ var projectCards;
           if (this.children["enlarge-icon"] != undefined) {
             this.children["enlarge-icon"].classList.toggle("fa-search-plus");
             this.children["enlarge-icon"].classList.toggle("fa-times");
-
           }
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-
-          var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-          function preventDefault(e) {
-            e.preventDefault();
-          }
-
-          function preventDefaultForScrollKeys(e) {
-            if (keys[e.keyCode]) {
-              preventDefault(e);
-              return false;
-            }
-          }
-          var supportsPassive = false;
-          try {
-            window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-              get: function () { supportsPassive = true; } 
-            }));
-          } catch(e) {}
-          
-          var wheelOpt = supportsPassive ? { passive: false } : false;
-          var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-          // call this to Disable
-          function disableScroll() {
-            window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-            window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-            window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-            window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-          }
-          
+          // call this to Enable
           function enableScroll() {
             window.removeEventListener('DOMMouseScroll', preventDefault, false);
             window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
             window.removeEventListener('touchmove', preventDefault, wheelOpt);
             window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
           }
-          
+        
           enableScroll();
-          
-
-        } 
-        element.addEventListener("click",first,false)
+        }
+        element.addEventListener("click", first, false);
       }
+    
     }
     showAchievements();
 
@@ -462,13 +418,8 @@ var projectCards;
       adjustSkillCardsHeight();
       adjustRecentPostsHeight();
       showAchievements();
-
-      
-
-
-
-      
     };
   });
 
 })(jQuery);
+
