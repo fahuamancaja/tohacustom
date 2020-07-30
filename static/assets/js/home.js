@@ -342,11 +342,35 @@ var projectCards;
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-          document.getElementById("achievement-entry").classList.add('show')
-          const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-          const body = document.body;
-          body.style.position = 'fixed';
-          body.style.top = `-${scrollY}`;
+
+          var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+          function preventDefault(e) {
+            e.preventDefault();
+          }
+
+          function preventDefaultForScrollKeys(e) {
+            if (keys[e.keyCode]) {
+              preventDefault(e);
+              return false;
+            }
+          }
+          var supportsPassive = false;
+          try {
+            window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+              get: function () { supportsPassive = true; } 
+            }));
+          } catch(e) {}
+          
+          var wheelOpt = supportsPassive ? { passive: false } : false;
+          var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+          function enableScroll() {
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+            window.removeEventListener('touchmove', preventDefault, wheelOpt);
+            window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+          }
+          enableScroll();
         }
       }
     }
