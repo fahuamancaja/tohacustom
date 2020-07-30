@@ -333,13 +333,15 @@ var projectCards;
           if (this.children["enlarge-icon"] != undefined) {
             this.children["enlarge-icon"].classList.toggle("fa-search-plus");
             this.children["enlarge-icon"].classList.toggle("fa-times");
-            this.body.style.position = 'fixed';
-            this.body.style.top = `-${window.scrollY}px`;
+
           }
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-          
+          const scrollY = document.body.style.top;
+          document.body.style.position = '';
+          document.body.style.top = '';
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
       }
     }
