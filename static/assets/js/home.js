@@ -321,11 +321,7 @@ var projectCards;
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
 
-          document.getElementById("achievement-entry").classList.add('show')
-          const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-          const body = document.body;
-          body.style.position = 'fixed';
-          body.style.top = `-${scrollY}`;
+          
 
           for (let j = 0; j < len2; j++) {
             achievements[j].classList.toggle("hidden");
@@ -346,7 +342,11 @@ var projectCards;
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-
+          document.getElementById("achievement-entry").classList.add('show')
+          const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+          const body = document.body;
+          body.style.position = 'fixed';
+          body.style.top = `-${scrollY}`;
         }
       }
     }
