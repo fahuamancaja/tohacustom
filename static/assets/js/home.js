@@ -338,6 +338,9 @@ var projectCards;
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${window.scrollY}px`;
+          
           const scrollY = document.body.style.top;
           document.body.style.position = '';
           document.body.style.top = '';
