@@ -316,7 +316,7 @@ var projectCards;
 
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
-      var scrollMouse = true;
+      var scrollMouse = false;
       for (let i = 0; i < len; i++) {
         elements[i].onclick = function () {
           let achievements = document.getElementsByClassName("achievement-entry");
