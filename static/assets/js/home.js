@@ -371,6 +371,7 @@ var projectCards;
             window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
             window.addEventListener('keydown', preventDefaultForScrollKeys, false);
           }
+          disableScroll();
           this.removeEventListner("click", first, false);
           this.addEventListener("click", second, false);
         }
