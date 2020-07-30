@@ -369,7 +369,7 @@ var projectCards;
 
 
         
-
+        addEventListener("click", disableScroll, false);
 
         // /////End of Test
         
@@ -411,7 +411,7 @@ var projectCards;
       window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 
-    element.addEventListener("click", disableScroll, false);
+    
 
 
     };
