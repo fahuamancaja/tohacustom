@@ -376,15 +376,7 @@ var projectCards;
       }
     }
     showAchievements();
-
-    // re-render custom functions on window resize
-    window.onresize = function () {
-      detectDevice();
-      adjustSkillCardsHeight();
-      adjustRecentPostsHeight();
-      showAchievements();
-
-      var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
           function preventDefault(e) {
             e.preventDefault();
@@ -413,6 +405,15 @@ var projectCards;
         window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
       }
       enableScroll();
+
+    // re-render custom functions on window resize
+    window.onresize = function () {
+      detectDevice();
+      adjustSkillCardsHeight();
+      adjustRecentPostsHeight();
+      showAchievements();
+
+      
 
 
 
