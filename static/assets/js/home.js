@@ -317,7 +317,7 @@ var projectCards;
           document.body.style.position = '';
           document.body.style.top = '';
           window.scrollTo(0, parseInt(scrollY || '0') * -1);
-          
+
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
       for (let i = 0; i < len; i++) {
@@ -325,8 +325,7 @@ var projectCards;
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
 
-          document.body.style.position = 'fixed';
-          document.body.style.top = `-${window.scrollY}px`;
+          
           
           
           // const scrollY = document.body.style.top;
