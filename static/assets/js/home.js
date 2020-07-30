@@ -337,8 +337,8 @@ var projectCards;
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-          this.body.style.position = 'fixed';
-          this.body.style.top = `-${window.scrollY}px`;
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${window.scrollY}px`;
         }
       }
     }
