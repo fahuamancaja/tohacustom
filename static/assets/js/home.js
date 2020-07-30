@@ -369,10 +369,34 @@ var projectCards;
 
 
         
-        addEventListener("click", disableScroll, false);
+        this.addEventListener("click", disableScroll, false);
+
+
+
+
+            // call this to Disable
+    function disableScroll() {
+      window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+      window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+      window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+      window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+      this.removeEventListner("click", disableScroll, false);
+      this.addEventListener("click", enableScroll, false);
+    }
+
+    // call this to Enable
+    function enableScroll() {
+      window.removeEventListener('DOMMouseScroll', preventDefault, false);
+      window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+      window.removeEventListener('touchmove', preventDefault, wheelOpt);
+      window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+    }
+
+
 
         // /////End of Test
         
+
         }
 
       }
@@ -393,23 +417,6 @@ var projectCards;
 
 
 
-    // call this to Disable
-    function disableScroll() {
-      window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-      window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-      window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-      window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-      this.removeEventListner("click", disableScroll, false);
-      this.addEventListener("click", enableScroll, false);
-    }
-
-    // call this to Enable
-    function enableScroll() {
-      window.removeEventListener('DOMMouseScroll', preventDefault, false);
-      window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-      window.removeEventListener('touchmove', preventDefault, wheelOpt);
-      window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-    }
 
     
 
