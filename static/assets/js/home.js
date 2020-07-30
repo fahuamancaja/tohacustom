@@ -316,6 +316,7 @@ var projectCards;
 
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
+      var scroll = true;
       for (let i = 0; i < len; i++) {
         elements[i].onclick = function () {
           let achievements = document.getElementsByClassName("achievement-entry");
@@ -371,40 +372,26 @@ var projectCards;
             window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
             window.addEventListener('keydown', preventDefaultForScrollKeys, false);
           }
-          disableScroll();
+          
+          function enableScroll() {
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+            window.removeEventListener('touchmove', preventDefault, wheelOpt);
+            window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+          }
+          
+          if(scroll = true){
+            disableScroll();
+            scroll = false;
+          }
+          if(scroll = false){
+            enableScroll();
+            scroll = true;
+          }
         }
       }
     }
     showAchievements();
-    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-          function preventDefault(e) {
-            e.preventDefault();
-          }
-
-          function preventDefaultForScrollKeys(e) {
-            if (keys[e.keyCode]) {
-              preventDefault(e);
-              return false;
-            }
-          }
-          var supportsPassive = false;
-          try {
-            window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-              get: function () { supportsPassive = true; } 
-            }));
-          } catch(e) {}
-          
-          var wheelOpt = supportsPassive ? { passive: false } : false;
-          var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-          
-      function enableScroll() {
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-        window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-        window.removeEventListener('touchmove', preventDefault, wheelOpt);
-        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-      }
-      enableScroll();
 
     // re-render custom functions on window resize
     window.onresize = function () {
