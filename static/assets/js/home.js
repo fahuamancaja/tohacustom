@@ -365,7 +365,7 @@ var projectCards;
         var wheelOpt = supportsPassive ? { passive: false } : false;
         var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-        disableScroll();
+
 
 
         
