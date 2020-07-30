@@ -406,8 +406,9 @@ var projectCards;
           }
         
           enableScroll();
+          
         }
-        elements[i].addEventListener("click", first, false);
+        addEventListener("click", this.first, false);
       }
     
     }
