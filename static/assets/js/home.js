@@ -316,12 +316,9 @@ var projectCards;
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
       for (let i = 0; i < len; i++) {
-        elements[i].onclick =
-        function () {
+        elements[i].onclick = function () {
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
-    
-
           for (let j = 0; j < len2; j++) {
             achievements[j].classList.toggle("hidden");
           }
@@ -340,25 +337,6 @@ var projectCards;
           if (this.children["achievement-title"] != undefined) {
             this.children["achievement-title"].classList.toggle("hidden");
           }
-        
-
-
-
-
-
-        
-
-
-
-
-
-    }
-
-
-
-        // /////End of Test
-        
-
         }
 
         /////////Test
@@ -387,27 +365,31 @@ var projectCards;
 
         var wheelOpt = supportsPassive ? { passive: false } : false;
         var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-            // call this to Disable
-            function disableScroll() {
-              window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-              window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-              window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-              window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-              this.removeEventListner("click", disableScroll, false);
-              this.addEventListener("click", enableScroll, false);
-            }
+          // call this to Disable
+          function disableScroll() {
+            window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+            window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+            window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+            window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+            this.removeEventListner("click", disableScroll, false);
+            this.addEventListener("click", enableScroll, false);
+          }
+      
+          // call this to Enable
+          function enableScroll() {
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+            window.removeEventListener('touchmove', preventDefault, wheelOpt);
+            window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+
+      this.addEventListener("click", disableScroll, false);
+          }
+        }
         
-            // call this to Enable
-            function enableScroll() {
-              window.removeEventListener('DOMMouseScroll', preventDefault, false);
-              window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-              window.removeEventListener('touchmove', preventDefault, wheelOpt);
-              window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+      
 
-        this.addEventListener("click", disableScroll, false);
 
-      }
-    
+      
     }
     showAchievements();
 
@@ -417,19 +399,9 @@ var projectCards;
       adjustSkillCardsHeight();
       adjustRecentPostsHeight();
       showAchievements();
-
-
-
-
-
-
-
-
-    
-
-
     };
   });
 
 })(jQuery);
+
 
