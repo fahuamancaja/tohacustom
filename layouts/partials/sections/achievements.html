@@ -7,7 +7,7 @@
     </div>
   </div>
   <!-- achievements-holder holds achievement-entry -->
-  <div class="d-none" id="achievements-holder">
+  <div class="d-none" id="achievements-holder"aria-hidden="true">
     {{ range .achievements }}
       {{ partial "sections/achievements/entry.html" . }}
     {{ end }}
