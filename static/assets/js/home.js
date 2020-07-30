@@ -325,7 +325,7 @@ var projectCards;
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
 
-          
+          document.body.style.position = 'fixed';
           
           
           // const scrollY = document.body.style.top;
