@@ -316,9 +316,12 @@ var projectCards;
       let elements = document.getElementsByClassName("achievement-entry");
       len = elements.length;
       for (let i = 0; i < len; i++) {
-        elements[i].onclick = function () {
+        elements[i].onclick =
+        function () {
           let achievements = document.getElementsByClassName("achievement-entry");
           let len2 = achievements.length;
+    
+
           for (let j = 0; j < len2; j++) {
             achievements[j].classList.toggle("hidden");
           }
@@ -338,6 +341,26 @@ var projectCards;
             this.children["achievement-title"].classList.toggle("hidden");
           }
         
+
+
+
+
+
+        
+
+
+
+
+
+    }
+
+
+
+        // /////End of Test
+        
+
+        }
+
         /////////Test
         // left: 37, up: 38, right: 39, down: 40,
         // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
@@ -364,40 +387,24 @@ var projectCards;
 
         var wheelOpt = supportsPassive ? { passive: false } : false;
         var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-
-
-
-        
-
-
-
-
             // call this to Disable
-    function disableScroll() {
-      window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-      window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-      window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-      window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-      this.removeEventListner("click", disableScroll, false);
-      this.addEventListener("click", enableScroll, false);
-    }
-
-    // call this to Enable
-    function enableScroll() {
-      window.removeEventListener('DOMMouseScroll', preventDefault, false);
-      window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-      window.removeEventListener('touchmove', preventDefault, wheelOpt);
-      window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-    }
-    this.addEventListener("click", disableScroll, false);
-
-
-
-        // /////End of Test
+            function disableScroll() {
+              window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+              window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+              window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+              window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+              this.removeEventListner("click", disableScroll, false);
+              this.addEventListener("click", enableScroll, false);
+            }
         
+            // call this to Enable
+            function enableScroll() {
+              window.removeEventListener('DOMMouseScroll', preventDefault, false);
+              window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+              window.removeEventListener('touchmove', preventDefault, wheelOpt);
+              window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 
-        }
+        this.addEventListener("click", disableScroll, false);
 
       }
     
