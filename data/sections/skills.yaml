@@ -20,7 +20,7 @@ skills:
 
 - name: SQLite
   icon: "images/skills/sqlite.png"
-  summary: "Used in NocBox and WhosThatPokemon project. Was able to learn and utilize SQL commands and Sqlite extension to repurpose for my projects."
+  summary: "Used in NocBox and ShiftChecker project. Was able to learn and utilize SQL commands and Sqlite extension to repurpose for my projects."
 
 - name: PHP
   icon: "images/skills/php.png"
