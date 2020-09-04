@@ -16,7 +16,7 @@ skills:
 
 - name: Entity Framework
   icon: "images/skills/entity.png"
-  summary: "Recently learned skill. Wrote Code First and Database first programs. Created Hospital Management System based on Code First."
+  summary: "Write Code First and Database first programs. Created Hospital Management System based on Code First."
 
 - name: SQLite
   icon: "images/skills/sqlite.png"
