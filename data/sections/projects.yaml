@@ -24,10 +24,19 @@ projects:
   logo: images/projects/csharp.png
   role: Developer
   timeline: "July 2020"
-  repo: https://github.com/fahuamancaja/HospitalIncorporatedManagementSystem # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  repo: https://github.com/fahuamancaja/HospitalRecordsManagementSystem # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
   summary: C# .Net and Entity Framework project.
   tags: ["professional", "c#", "entity"]
+
+- name: ShiftChecker
+  logo: images/projects/csharp.png
+  role: Developer
+  timeline: "July 2020"
+  repo: https://github.com/fahuamancaja/ShiftChecker # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: C# .Net and SQLite Database Project.
+  tags: ["professional", "c#"]
 
 - name: Subnet Calculator
   logo: images/projects/csharp.png
