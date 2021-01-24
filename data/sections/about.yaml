@@ -6,7 +6,7 @@ section:
   showOnNavbar: true
 
 # your designation
-designation: Software Engineer
+designation: C# Software Engineer
 # your company information
 company:
   name: At Heart
@@ -16,7 +16,7 @@ company:
 resume: "files/FernandoHuamancajaResume.pdf"
 
 # a summary about you
-summary: 'I am passionate about programming as a whole. Since the beginning of this year I have spent my time learning and coding C# on my free time. I made a tool called NocBox at my current place of employement and is being used by most team members in our Networking Team. Sometimes, I work on some fun projects such as making a game like my Whos that Pokemon Trivia Game.'
+summary: 'I am passionate about refining my programming abilities and programming as a whole. Since the beginning of 2020, I have spent my time learning and coding C# in my free time. I'm proud to say I made a tool called NocBox at my current place of employement and is being used by most team members in our Networking Team.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.

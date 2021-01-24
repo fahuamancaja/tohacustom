@@ -16,7 +16,7 @@ skills:
 
 - name: Entity Framework
   icon: "images/skills/entity.png"
-  summary: "Write Code First and Database first programs. Created Hospital Management System based on Code First."
+  summary: "Write Code First and Database first programs. Created various programs based on Code First."
 
 - name: SQLite
   icon: "images/skills/sqlite.png"
@@ -36,8 +36,8 @@ skills:
 
 - name: Git
   icon: "images/skills/git.png"
-  summary: "Experienced with GitHub based development. Mostly, have used Github."
+  summary: "Experienced with GitHub based development."
 
 - name: Linux
   icon: "images/skills/linux.png"
-  summary: "Know basic Linux Rhel Comand Line. Learned in first year of college."
+  summary: "Learned intermediate Linux Rhel Comand Line. Learned in first year of college."

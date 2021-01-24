@@ -20,55 +20,38 @@ buttons:
 
 # your projects
 projects:
-- name: Hospital Incorporated
+- name: DatingAppUpdated
   logo: images/projects/csharp.png
   role: Developer
-  timeline: "July 2020"
-  repo: https://github.com/fahuamancaja/HospitalRecordsManagementSystem # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  timeline: "January 2021 (Work in Progress)"
+  repo: https://github.com/fahuamancaja/DatingAppUpdated # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: C# .Net and Entity Framework project.
-  tags: ["professional", "c#", "entity"]
+  summary: Fullstack Project - C# .Net Core 5 Asp.Net and Typescript Angular 10. Udemy Course Project I've been following.
+  tags: ["professional", "c#", "angular"]
 
-- name: ShiftChecker
+- name: NocBox 2.0
   logo: images/projects/csharp.png
   role: Developer
-  timeline: "July 2020"
-  repo: https://github.com/fahuamancaja/ShiftChecker # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  timeline: "December 2020"
+  repo: https://github.com/fahuamancaja/NocBox-2.0 # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: C# .Net and SQLite Database Project.
-  tags: ["professional", "c#"]
+  summary: C# Entity Framework Project. Reads CSV and SQLite Data. You can choose your theme color.
+  tags: ["networking", "c#", "sqlite"]
 
-- name: Subnet Calculator
+- name: MovieSearch
   logo: images/projects/csharp.png
   role: Developer
-  timeline: "July 2020"
-  repo: https://github.com/fahuamancaja/SubnetCalculator
-  #url: ""
-  summary: Tool to find the subnet of a network.
-  tags: ["professional", "C#","networking"]
+  timeline: "November 2020"
+  repo: https://github.com/fahuamancaja/MovieSearch # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: C# .Net, Angular and SQLite Database Project.
+  tags: ["hobby", "c#", "angular"]
 
-- name: WhosThatPokemon
+- name: Shift Checker
   logo: images/projects/csharp.png
   role: Developer
-  timeline: "May 2020 - June 2020"
-  repo: https://github.com/fahuamancaja/WhosThatPokemon
+  timeline: "August 2020"
+  repo: https://github.com/fahuamancaja/ShiftChecker
   #url: ""
-  summary: A game made to guess who the pokemon is that is shaded out. 7 Levels of difficulty and 7 generations of Pokemon.
-  tags: ["hobby","fun"]
-
-- name: NocBox
-  logo: images/projects/csharp.png
-  role: Developer
-  timeline: "March 2020 - April 2020"
-  repo: https://github.com/fahuamancaja/NocBox
-  #url: ""
-  summary: An application I packaged to make work more efficient. Other Network Engineers also use application.
-  tags: ["professional", "c#","networking"]
-
-- name: Pokemon_Trivia
-  logo: images/projects/php.png
-  role: Developer
-  timeline: "Jun 2019 - Present"
-  repo: https://github.com/fahuamancaja/Pokemon_Trivia
-  summary: A web based game made to guess who the pokemon is that is shaded out.
-  tags: ["hobby","fun"]
+  summary: Tool to keep track of schedule and calendar dates
+  tags: ["professional", "c#","xamarin"]
