@@ -51,7 +51,7 @@ projects:
   logo: images/projects/csharp.png
   role: Developer
   timeline: "August 2020"
-  repo: https://github.com/fahuamancaja/ShiftChecker
+  #repo: https://github.com/fahuamancaja/ShiftChecker
   #url: ""
   summary: Tool to keep track of schedule and calendar dates
   tags: ["professional", "c#","xamarin"]
