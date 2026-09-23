@@ -7,11 +7,11 @@
   role: Lead engineer · CapTech
   timeline: 2025 – present
   logo: /images/skills/azure-ai.svg
-  summary: Multi-agent workflows on Azure AI Foundry, orchestrated with Semantic Kernel and exposed as .NET APIs.
+  summary: Multi-agent workflows on Azure AI Foundry, orchestrated with Semantic Kernel in Python and exposed as API endpoints.
   problem: Business processes needed language-model reasoning over internal documents and systems, with quality that could be proven, not assumed.
-  approach: Semantic Kernel agents in .NET with plugins for internal APIs, Service Bus for asynchronous hand-offs, Blob and Table storage for state, and indexers that keep retrieval grounded.
+  approach: Semantic Kernel agents in Python with plugins for internal APIs, Service Bus for asynchronous hand-offs, Blob and Table storage for state, and indexers that keep retrieval grounded.
   outcome: Dedicated evaluator and scoring agents grade every agent and API response, so regressions surface before release instead of in front of users.
-  tags: [Azure AI Foundry, Semantic Kernel, .NET, Service Bus, Azure Storage]
+  tags: [Azure AI Foundry, Semantic Kernel, Python, Service Bus, Azure Storage]
 
 - id: azure-iac
   order: 2

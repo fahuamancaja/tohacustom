@@ -37,9 +37,13 @@
       icon: /images/skills/azure-ai.svg
       summary: Model deployments, prompts and agents managed on AI Foundry and wired into production .NET applications.
       tags: [Model deployments, Agents, Prompt flow]
+    - name: Python for AI
+      icon: /images/skills/python.svg
+      summary: The language I build agents, evaluators and data pipelines in, from async services and typed models to the API endpoints around them.
+      tags: [Python, asyncio, Pydantic]
     - name: Semantic Kernel
       icon: /images/skills/semantic-kernel.svg
-      summary: Multi-agent workflows in C# with plugins, planners and function calling, exposed through API endpoints.
+      summary: Multi-agent workflows in Python with plugins, planners and function calling, exposed through API endpoints.
       tags: [Agents, Plugins, Function calling]
     - name: Agent evaluation & scoring
       glyph: chart

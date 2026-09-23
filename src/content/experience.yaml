@@ -10,7 +10,7 @@
       start: Mar 2025
       bullets:
         - Design and build Azure infrastructure as code with Terraform, and deploy it through Azure DevOps pipelines across environments.
-        - Develop AI solutions on Azure AI Foundry, orchestrating multi-agent workflows with Semantic Kernel in .NET and exposing them as API endpoints.
+        - Develop AI solutions on Azure AI Foundry, orchestrating multi-agent workflows with Semantic Kernel in Python and exposing them as API endpoints.
         - Build scoring and evaluation agents that grade agent and API responses so quality is measured before and after every release.
         - Design event-driven integrations with Azure Service Bus and Azure Storage (Blob containers and Table storage).
         - Build data indexers and ingestion pipelines that feed search and retrieval for AI workloads.
