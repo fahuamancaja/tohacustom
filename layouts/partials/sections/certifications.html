@@ -1,0 +1,35 @@
+<div class="container-fluid anchor pb-5 certifications-section" id="{{ replace (lower .section.name) " " "-" }}">
+  {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">{{ .section.name }}</h1>
+  {{ end }}
+  <div class="container">
+    <div class="row">
+      {{ range .certifications }}
+      <div class="col-12 col-md-6 p-2 d-flex">
+        <div class="card cert-card w-100">
+          <div class="d-flex align-items-start">
+            <div class="cert-badge">
+              {{ if .image }}
+                <img src="{{ .image }}" alt="{{ .title }}" />
+              {{ else if .faIcon }}
+                <span class="cert-fa-icon"><i class="{{ .faIcon }}"></i></span>
+              {{ end }}
+            </div>
+            <div class="cert-body">
+              <h5 class="cert-title">{{ .title }}</h5>
+              <p class="cert-meta">
+                {{ with .issuer }}<span>{{ . }}</span>{{ end }}
+                {{ with .date }}<span class="cert-date">{{ . }}</span>{{ end }}
+              </p>
+              <p class="cert-summary">{{ .summary | markdownify }}</p>
+              {{ with .url }}
+              <a class="cert-link" href="{{ . }}" target="_blank" rel="noopener">View credential <i class="fas fa-external-link-alt"></i></a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

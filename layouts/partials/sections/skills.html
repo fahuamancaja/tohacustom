@@ -3,10 +3,23 @@
     <h1 class="text-center">{{ .section.name }}</h1>
   {{ end }}
   <div class="container d-flex-block">
-    <div class="row" id="primary-skills">
+    {{ if .categories }}
+      {{ range .categories }}
+      <div class="skill-category">
+        <h4 class="skill-category-title">{{ .name }}</h4>
+        <div class="row">
+          {{ range .skills }}
+            {{ partial "cards/skill.html" . }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    {{ else }}
+    <div class="row">
       {{ range .skills }}
         {{ partial "cards/skill.html" . }}
       {{ end }}
     </div>
+    {{ end }}
   </div>
 </div>

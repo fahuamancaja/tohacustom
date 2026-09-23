@@ -1,0 +1,34 @@
+# section information
+section:
+  name: Certifications
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+# Certifications, awards and education. Each entry supports:
+#   title, issuer, date, summary, image (badge) or faIcon, url (optional link)
+certifications:
+- title: Claude Certified Architect – Foundations
+  issuer: Anthropic
+  date: Sep 2026
+  image: images/certifications/claude-certified-architect-foundations.svg
+  summary: First step in the Architect track. Validates the skills to design, build and deliver production-ready solutions with Claude.
+  url: https://www.credly.com/
+
+- title: "Microsoft Certified: Azure Fundamentals (AZ-900)"
+  issuer: Microsoft
+  date: Apr 2021
+  image: images/skills/azure.svg
+  summary: Cloud concepts, core Azure services, security, privacy, compliance and pricing.
+
+- title: YearOne Mentorship Finalist
+  issuer: YearOne
+  date: Jan 2021
+  faIcon: "fas fa-award"
+  summary: Selected from nearly 800 candidates as a YearOne programming finalist.
+
+- title: Computer Network Integration
+  issuer: Central Piedmont Community College
+  date: Dec 2012
+  faIcon: "fas fa-graduation-cap"
+  summary: Graduated with a 4.0 GPA in Charlotte, NC.

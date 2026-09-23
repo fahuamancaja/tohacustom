@@ -3,8 +3,10 @@
     class="background container-fluid"
     style="background-image: url('{{ if .Site.Params.background }}{{ .Site.Params.background }}{{ else }}/assets/images/default-background.jpg{{ end }}');"
   ></div>
+  <div class="hero-overlay"></div>
   <div class="container content text-center">
     <img src="{{ if .Site.Params.author.image }}{{ .Site.Params.author.image }}{{ else }}/assets/images/default-avatar.png{{ end }}"
+      alt="{{ .Site.Params.author.name }}"
       class="rounded-circle mx-auto d-block img-fluid"
     />
     <h1 class="greeting">Hi, I am
@@ -16,6 +18,9 @@
         Jane Doe
       {{ end }}
     </h1>
+    {{ with .Site.Params.author.tagline }}
+    <p class="hero-tagline">{{ . }}</p>
+    {{ end }}
     <div class="typing-carousel">
       <span id="ityped" class="ityped"></span>
       <span class="ityped-cursor"></span>
@@ -25,6 +30,13 @@
       <li>{{ . }}</li>
       {{ end }}
     </ul>
+    {{ with .Site.Params.author.links }}
+    <div class="hero-links">
+      {{ range . }}
+      <a class="btn btn-hero" href="{{ .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}><i class="{{ .icon }}"></i> {{ .name }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
     {{ if .Site.Data.sections }}
       {{ range first 1 (where (sort .Site.Data.sections "section.weight") ".section.enable" true) }}
         <a href="#{{ replace (lower .section.name) " " "-" }}"><i class="arrow bounce fa fa-chevron-down"></i></a>

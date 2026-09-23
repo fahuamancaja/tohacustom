@@ -6,20 +6,29 @@ section:
   showOnNavbar: true
 
 # your designation
-designation: C# Software Engineer
+designation: Manager, System Integrations
 # your company information
 company:
-  name: At Heart
-  url: "#"
+  name: CapTech
+  url: "https://www.captechconsulting.com/"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/FernandoHuamancajaResume.pdf"
 
-# a summary about you
-summary: 'I am passionate about refining my programming abilities and programming as a whole. Since the beginning of 2020, I have spent my time learning and coding C# in my free time. I am proud to say I made a tool called NocBox at my current place of employement and is being used by most team members in our Networking Team.'
+# a summary about you (markdown is allowed)
+summary: |
+  I am a software engineer turned cloud and AI integration lead. At CapTech I design and ship
+  solutions on **Microsoft Azure**: infrastructure defined in **Terraform** and delivered through
+  **Azure Pipelines**, event-driven integrations built on **Service Bus** and **Azure Storage**, and
+  AI workloads running on **Azure AI Foundry**.
+
+  My current focus is agentic AI in .NET. I orchestrate multi-agent workflows with **Semantic Kernel**,
+  expose them as API endpoints, and build scoring and evaluation agents so quality is measured, not assumed.
+
+  Before consulting I spent several years in financial services at LPL Financial and Inspira Financial
+  building .NET and Angular platforms, and I started my career in networking and IT support at Lowe's.
 
 # your social links
-# give as many as you want. use font-awesome for the icons.
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
@@ -29,48 +38,21 @@ socialLinks:
   icon: "fab fa-github"
   url: "https://github.com/fahuamancaja"
 
-- name: Stackoverflow
-  icon: "fab fa-stack-overflow"
-  url: "#"
-
 - name: LinkedIn
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/fernando-huamancaja/"
 
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "#"
-
-- name: Facebook
-  icon: "fab fa-facebook"
-  url: "#"
-
-# your soft skills
-# give the percentage between 50 to 100 with 5 intervals.
-# currently supported colors: blue, yellow, pink, green, sky, orange
-softSkills:
-- name: Leadership
-  percentage: 100
-  color: blue
-- name: Team Work
-  percentage: 100
-  color: yellow
-- name: Communication
-  percentage: 100
-  color: pink
-- name: Hard Working
-  percentage: 100
-  color: green
-- name: Fast Learner
-  percentage: 100
-  color: sky
-- name: Problem Solving
-  percentage: 100
-  color: orange
-# you can also provide color code instead of pre-defined color name
-# - name: Example 1
-#   percentage: 75
-#   color: "#00adb5"
-# - name: Example 2
-#   percentage: 65
-#   color: "#8b8383"
+# what I do now. shown on the right side of the about section.
+highlights:
+- title: Azure cloud & infrastructure as code
+  icon: "fas fa-cloud"
+  summary: Terraform modules and environments deployed through Azure DevOps pipelines.
+- title: AI agent orchestration
+  icon: "fas fa-robot"
+  summary: Semantic Kernel agents on Azure AI Foundry, exposed as APIs, with evaluation and scoring agents.
+- title: Event-driven integrations
+  icon: "fas fa-exchange-alt"
+  summary: Service Bus messaging, Blob and Table storage, and data indexers feeding search and retrieval.
+- title: .NET engineering & delivery
+  icon: "fas fa-code"
+  summary: C# services, APIs and CI/CD with a background in .NET migrations and production support.
