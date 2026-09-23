@@ -50,6 +50,12 @@ public/         static assets served as-is (favicon, logos, og image, robots.txt
 Dark mode follows the visitor's system preference and can be toggled from the header; the choice
 is remembered in `localStorage`.
 
+## Analytics
+
+Analytics are off by default. To enable Google Analytics 4, set `PUBLIC_GA_MEASUREMENT_ID` to your
+`G-XXXXXXXXXX` measurement ID (locally in a `.env` file, in production under Netlify site
+environment variables). The tag is only rendered when the variable is present.
+
 ## Deploy
 
 Netlify builds from `netlify.toml` (`npm run build`, publish `dist/`, Node 22). The GitHub
