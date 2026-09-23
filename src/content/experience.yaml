@@ -1,0 +1,95 @@
+# Work history, newest first (lower "order" renders first).
+- id: captech
+  order: 1
+  company: CapTech
+  url: https://www.captechconsulting.com/
+  location: United States
+  overview: Technology consulting firm delivering cloud, data and AI solutions for enterprise clients.
+  positions:
+    - title: Manager, System Integrations
+      start: Mar 2025
+      bullets:
+        - Design and build Azure infrastructure as code with Terraform, and deploy it through Azure DevOps pipelines across environments.
+        - Develop AI solutions on Azure AI Foundry, orchestrating multi-agent workflows with Semantic Kernel in .NET and exposing them as API endpoints.
+        - Build scoring and evaluation agents that grade agent and API responses so quality is measured before and after every release.
+        - Design event-driven integrations with Azure Service Bus and Azure Storage (Blob containers and Table storage).
+        - Build data indexers and ingestion pipelines that feed search and retrieval for AI workloads.
+        - Lead technical delivery with client stakeholders and engineers.
+
+- id: inspira
+  order: 2
+  company: Inspira Financial
+  url: https://inspirafinancial.com/
+  location: United States
+  overview: Financial services company providing health, wealth, retirement and benefits solutions.
+  positions:
+    - title: Software Engineer
+      start: Nov 2024
+      end: Mar 2025
+      bullets:
+        - Full-stack .NET and Angular development on financial services platforms.
+        - Delivered features in an agile team alongside product, QA and platform engineers.
+
+- id: lpl
+  order: 3
+  company: LPL Financial
+  url: https://www.lpl.com/
+  location: Fort Mill, SC (Remote)
+  overview: Largest independent broker-dealer in the United States.
+  positions:
+    - title: Senior Software Engineer
+      start: Jun 2023
+      end: Oct 2024
+      bullets:
+        - Owned features end to end on .NET 6 and Angular applications used by advisors and operations teams.
+        - Troubleshot production issues during release nights and drove fixes across teams.
+        - Led research and discovery spikes with partner teams and documented recommendations.
+        - Created Cucumber acceptance tests with the QA team to harden regression coverage.
+    - title: Software Engineer II
+      start: Jun 2021
+      end: Jun 2023
+      bullets:
+        - Migrated applications from .NET Framework 4 to .NET 6 and introduced the Mediator pattern in the migrated projects.
+        - Built controller endpoints and business logic following the Repository pattern.
+        - Maintained TeamCity and Octopus CI/CD pipelines and resolved build and deployment issues.
+        - Worked with the AWS Management Console and CLI and used GitHub for source control.
+
+- id: canvaspeople
+  order: 4
+  company: CanvasPeople
+  url: https://www.canvaspeople.com/
+  location: Remote
+  overview: E-commerce company selling custom canvas prints.
+  positions:
+    - title: .NET Engineer (Contract)
+      start: Feb 2021
+      end: Mar 2021
+      bullets:
+        - Extended a nopCommerce store built on .NET Core MVC, Razor Pages, Entity Framework and MSSQL.
+        - Delivered in Scrum sprints with the client's product team.
+
+- id: lowes
+  order: 5
+  company: Lowe's Companies
+  url: https://www.lowes.com/
+  location: Mooresville, NC
+  overview: Fortune 50 home improvement retailer.
+  positions:
+    - title: Network Engineer / .NET Developer
+      start: Nov 2019
+      end: Feb 2021
+      bullets:
+        - Created NocBox, a C# .NET WinForms troubleshooting tool backed by SQLite and Dapper that the network operations team used daily.
+        - Built ShiftChecker, a Xamarin.Forms mobile app for shift tracking.
+        - Troubleshot routers, switches, wireless controllers and access points and drove escalations with higher tiers and ISPs.
+    - title: IT Support Analyst
+      start: May 2018
+      end: Nov 2019
+      bullets:
+        - Subject matter expert for mobility and supply chain systems on the night shift.
+        - Built an internal HTML/JavaScript knowledge page and trained new hires.
+    - title: Service Desk Technician
+      start: Mar 2017
+      end: May 2018
+      bullets:
+        - Supported Windows and iOS devices using PuTTY, AirWatch, Active Directory and SCCM remote tools.

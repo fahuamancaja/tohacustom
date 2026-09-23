@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const groups = (await getCollection('skills')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="skills" class="section bg-slate-50 dark:bg-slate-900/40">
+  <div class="container-page">
+    <SectionHeading eyebrow="Skills" title="Tools I reach for." description="Grouped by the kind of problem they solve." />
+
+    <div class="space-y-12">
+      {groups.map(({ data }) => (
+        <div>
+          <h3 class="eyebrow mb-4">{data.name}</h3>
+          <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {data.skills.map((skill) => (
+              <li class="card flex flex-col p-5">
+                <div class="flex items-center gap-3">
+                  {skill.icon ? (
+                    <img src={skill.icon} alt="" width="32" height="32" class="logo h-8 w-8" loading="lazy" />
+                  ) : (
+                    <span class="grid h-8 w-8 place-items-center rounded-lg bg-accent-50 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
+                      <Icon name={skill.glyph ?? 'sparkles'} size={18} />
+                    </span>
+                  )}
+                  <h4 class="font-semibold">{skill.name}</h4>
+                </div>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">{skill.summary}</p>
+                <ul class="mt-auto flex flex-wrap gap-1.5 pt-4">
+                  {skill.tags.map((tag) => <li class="chip">{tag}</li>)}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

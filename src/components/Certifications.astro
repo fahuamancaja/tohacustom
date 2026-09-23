@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const certifications = (await getCollection('certifications')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="certifications" class="section">
+  <div class="container-page">
+    <SectionHeading eyebrow="Certifications & education" title="Credentials." />
+
+    <ul class="grid gap-4 md:grid-cols-2">
+      {certifications.map(({ data }) => (
+        <li class="card flex gap-5 p-5">
+          <div class="grid h-20 w-20 shrink-0 place-items-center">
+            {data.image ? (
+              <img src={data.image} alt="" width="80" height="80" class="max-h-20 max-w-20 object-contain" loading="lazy" />
+            ) : (
+              <span class="grid h-16 w-16 place-items-center rounded-full bg-accent-50 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
+                <Icon name={data.glyph ?? 'award'} size={28} />
+              </span>
+            )}
+          </div>
+          <div class="min-w-0">
+            <h3 class="font-semibold leading-snug">{data.title}</h3>
+            <p class="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{data.issuer} · {data.date}</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">{data.summary}</p>
+            {data.url && (
+              <a href={data.url} target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 hover:underline dark:text-accent-400">
+                View credential <Icon name="external-link" size={14} />
+              </a>
+            )}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
