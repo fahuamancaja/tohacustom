@@ -12,9 +12,6 @@ company:
   name: CapTech
   url: "https://www.captechconsulting.com/"
 
-# your resume. this file path should be relative to you "static" directory
-resume: "files/FernandoHuamancajaResume.pdf"
-
 # a summary about you (markdown is allowed)
 summary: |
   I am a software engineer turned cloud and AI integration lead. At CapTech I design and ship

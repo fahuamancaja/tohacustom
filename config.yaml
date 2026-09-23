@@ -71,6 +71,3 @@ params:
     - name: GitHub
       icon: "fab fa-github"
       url: "https://github.com/fahuamancaja"
-    - name: Resume
-      icon: "fas fa-file-alt"
-      url: "files/FernandoHuamancajaResume.pdf"
