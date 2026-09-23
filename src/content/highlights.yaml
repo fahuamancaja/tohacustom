@@ -1,0 +1,21 @@
+# "What I do now" cards shown next to the About text.
+- id: azure-iac
+  order: 1
+  title: Azure cloud & infrastructure as code
+  icon: cloud
+  summary: Terraform modules and environments deployed through Azure DevOps pipelines.
+- id: ai-agents
+  order: 2
+  title: AI agent orchestration
+  icon: bot
+  summary: Semantic Kernel agents on Azure AI Foundry, exposed as APIs, with evaluation and scoring agents.
+- id: integrations
+  order: 3
+  title: Event-driven integrations
+  icon: arrows
+  summary: Service Bus messaging, Blob and Table storage, and data indexers feeding search and retrieval.
+- id: dotnet
+  order: 4
+  title: .NET engineering & delivery
+  icon: code
+  summary: C# services, APIs and CI/CD with a background in .NET migrations and production support.

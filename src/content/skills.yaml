@@ -1,0 +1,101 @@
+# Skill groups. Each skill uses either an "icon" (image under public/images/skills)
+# or a "glyph" (name of a built-in line icon from src/components/Icon.astro).
+- id: cloud
+  order: 1
+  name: Cloud & infrastructure
+  skills:
+    - name: Microsoft Azure
+      icon: /images/skills/azure.svg
+      summary: Compute, storage, messaging, identity and AI services across multiple environments.
+      tags: [App Services, Functions, Key Vault, Entra ID]
+    - name: Terraform
+      icon: /images/skills/terraform.svg
+      summary: Reusable modules for Azure landing zones and application infrastructure, promoted through dev, test and prod.
+      tags: [Modules, Remote state, azurerm]
+    - name: Azure DevOps Pipelines
+      icon: /images/skills/azure-devops.svg
+      summary: YAML pipelines that plan and apply Terraform, run tests and deploy .NET services with approvals.
+      tags: [YAML pipelines, CI/CD, Environments]
+    - name: Azure Service Bus
+      icon: /images/skills/azure-service-bus.svg
+      summary: Queue and topic based integrations with retries, dead-lettering and idempotent consumers.
+      tags: [Queues, Topics, Event-driven]
+    - name: Azure Storage
+      icon: /images/skills/azure-storage.svg
+      summary: Blob containers for documents and artifacts, Table storage for lightweight state, lifecycle and access policies.
+      tags: [Blob, Table, SAS]
+    - name: Docker & Kubernetes
+      icon: /images/skills/docker.svg
+      summary: Containerized .NET services running locally and in the cloud.
+      tags: [Containers, Compose, AKS]
+
+- id: ai
+  order: 2
+  name: AI engineering
+  skills:
+    - name: Azure AI Foundry
+      icon: /images/skills/azure-ai.svg
+      summary: Model deployments, prompts and agents managed on AI Foundry and wired into production .NET applications.
+      tags: [Model deployments, Agents, Prompt flow]
+    - name: Python for AI
+      icon: /images/skills/python.svg
+      summary: The language I build agents, evaluators and data pipelines in, from async services and typed models to the API endpoints around them.
+      tags: [Python, asyncio, Pydantic]
+    - name: Semantic Kernel
+      icon: /images/skills/semantic-kernel.svg
+      summary: Multi-agent workflows in Python with plugins, planners and function calling, exposed through API endpoints.
+      tags: [Agents, Plugins, Function calling]
+    - name: Agent evaluation & scoring
+      glyph: chart
+      summary: Evaluator agents and scoring pipelines that grade responses for accuracy, groundedness and regressions.
+      tags: [Evaluators, Scoring, Quality gates]
+    - name: Search & data indexers
+      glyph: search
+      summary: Document and structured-data ingestion that gives agents grounded context to retrieve.
+      tags: [Azure AI Search, Indexers, RAG]
+    - name: Claude & LLM APIs
+      icon: /images/skills/claude.svg
+      summary: Claude Certified Architect (Foundations). Prompt, tool and agent patterns that hold up in production.
+      tags: [Anthropic, Tool use, Prompting]
+
+- id: backend
+  order: 3
+  name: Backend & data
+  skills:
+    - name: C# / .NET
+      icon: /images/skills/dotnet.svg
+      summary: ASP.NET Core APIs, background services, Mediator and CQRS patterns, and .NET Framework to .NET Core migrations.
+      tags: [.NET 8, ASP.NET Core, MediatR]
+    - name: Entity Framework & LINQ
+      icon: /images/skills/entity.png
+      summary: Code-first and database-first data access, migrations and query tuning.
+      tags: [EF Core, Dapper]
+    - name: SQL Server & PostgreSQL
+      icon: /images/skills/sqlserver.svg
+      summary: Relational modeling, stored procedures and performance work on MSSQL, plus PostgreSQL and SQLite for smaller services.
+      tags: [MSSQL, PostgreSQL, SQLite]
+    - name: Testing & quality
+      glyph: flask
+      summary: Unit and integration tests in .NET, Cucumber acceptance tests, and production release support.
+      tags: [xUnit, Cucumber, Release nights]
+
+- id: frontend
+  order: 4
+  name: Frontend & tooling
+  skills:
+    - name: Angular & TypeScript
+      icon: /images/skills/angular.svg
+      summary: Enterprise Angular front ends paired with .NET APIs, from component libraries to build pipelines.
+      tags: [Angular, TypeScript, RxJS]
+    - name: Git & GitHub
+      icon: /images/skills/github.svg
+      summary: Branching strategies, pull request reviews and GitHub-based delivery workflows.
+      tags: [GitHub, Azure Repos]
+    - name: AWS
+      icon: /images/skills/aws.svg
+      summary: Amplify, AppSync, DynamoDB and Cognito for serverless side projects, plus AWS console and CLI at LPL.
+      tags: [Amplify, DynamoDB, Cognito]
+    - name: Linux
+      icon: /images/skills/linux.png
+      summary: Comfortable on the command line for containers, pipeline agents and troubleshooting.
+      tags: [Bash, RHEL]

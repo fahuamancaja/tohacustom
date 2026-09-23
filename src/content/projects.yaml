@@ -1,0 +1,96 @@
+# Featured entries render as case studies (problem / approach / outcome).
+# Everything else renders in the "More projects" grid.
+- id: ai-agent-platform
+  order: 1
+  featured: true
+  name: AI agent orchestration platform
+  role: Lead engineer · CapTech
+  timeline: 2025 – present
+  logo: /images/skills/azure-ai.svg
+  summary: Multi-agent workflows on Azure AI Foundry, orchestrated with Semantic Kernel in Python and exposed as API endpoints.
+  problem: Business processes needed language-model reasoning over internal documents and systems, with quality that could be proven, not assumed.
+  approach: Semantic Kernel agents in Python with plugins for internal APIs, Service Bus for asynchronous hand-offs, Blob and Table storage for state, and indexers that keep retrieval grounded.
+  outcome: Dedicated evaluator and scoring agents grade every agent and API response, so regressions surface before release instead of in front of users.
+  tags: [Azure AI Foundry, Semantic Kernel, Python, Service Bus, Azure Storage]
+
+- id: azure-iac
+  order: 2
+  featured: true
+  name: Azure infrastructure as code
+  role: Cloud engineer · CapTech
+  timeline: 2025 – present
+  logo: /images/skills/terraform.svg
+  summary: Reusable Terraform modules and environment definitions for Azure, delivered through Azure DevOps pipelines.
+  problem: Environments were being assembled by hand, which made them slow to reproduce and hard to review.
+  approach: Terraform modules for networking, compute, storage, messaging and AI services, with remote state and per-environment variable sets.
+  outcome: YAML pipelines plan and apply every change with approvals per environment, giving reviewable, repeatable infrastructure from dev to production.
+  tags: [Terraform, Azure, Azure Pipelines, YAML]
+
+- id: event-driven-integrations
+  order: 3
+  featured: true
+  name: Event-driven system integrations
+  role: Integration engineer · CapTech
+  timeline: 2025 – present
+  logo: /images/skills/azure-service-bus.svg
+  summary: Service Bus queues and topics connecting line-of-business systems with resilient, idempotent .NET consumers.
+  problem: Point-to-point calls between systems were brittle and failed loudly whenever a downstream service was slow or unavailable.
+  approach: Decoupled producers and consumers with Service Bus, retries and dead-letter handling, and ingestion pipelines that index data for search and AI retrieval.
+  outcome: Integrations absorb downstream outages, replay safely, and give operators a clear view of every message that needs attention.
+  tags: [Azure Service Bus, Blob Storage, Table Storage, Azure AI Search]
+
+- id: reenas-blog
+  order: 4
+  name: Reena's Blog
+  role: Developer
+  timeline: March 2022
+  logo: /images/skills/aws.svg
+  summary: Serverless blog on AWS. Backend with AppSync, Amplify CLI, DynamoDB, Amplify Auth and Cognito; frontend with Next.js and Tailwind CSS.
+  tags: [AWS Amplify, DynamoDB, Next.js]
+
+- id: moviesearch
+  order: 5
+  name: MovieSearch
+  role: Developer
+  timeline: March 2021
+  logo: /images/skills/dotnet.svg
+  repo: https://github.com/fahuamancaja/MovieSearch
+  summary: TMDB-backed movie search. ASP.NET Core API with Entity Framework and an Angular client, run against SQLite and a PostgreSQL Docker container.
+  tags: [ASP.NET Core, Angular, PostgreSQL]
+
+- id: datingapp
+  order: 6
+  name: DatingAppUpdated
+  role: Developer
+  timeline: January 2021
+  logo: /images/skills/angular.svg
+  repo: https://github.com/fahuamancaja/DatingAppUpdated
+  summary: Full-stack course project on ASP.NET Core 5 and Angular 10 with TypeScript, covering auth, SignalR and paging.
+  tags: [ASP.NET Core, Angular, SignalR]
+
+- id: nocbox
+  order: 7
+  name: NocBox 2.0
+  role: Developer
+  timeline: December 2020
+  logo: /images/skills/csharp.png
+  summary: C# WinForms troubleshooting tool for a network operations team. Reads CSV, Excel and SQLite data through Dapper and Entity Framework.
+  tags: [C#, WinForms, SQLite]
+
+- id: shift-checker
+  order: 8
+  name: Shift Checker
+  role: Developer
+  timeline: August 2020
+  logo: /images/skills/csharp.png
+  summary: Xamarin.Forms mobile app that tracks shift schedules, days remaining and hours left, with SQLite local storage.
+  tags: [C#, Xamarin.Forms, SQLite]
+
+- id: hospital-management
+  order: 9
+  name: Hospital Management System
+  role: Developer
+  timeline: September 2020
+  logo: /images/skills/csharp.png
+  summary: Employee login and medical records desktop app on .NET Framework with LINQ, Entity Framework and SQLite.
+  tags: [C#, Entity Framework, SQLite]

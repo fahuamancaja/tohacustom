@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const experience = (await getCollection('experience')).sort((a, b) => a.data.order - b.data.order);
+const span = (positions: { start: string; end?: string }[]) => {
+  const first = positions[positions.length - 1];
+  const last = positions[0];
+  return `${first.start} – ${last.end ?? 'Present'}`;
+};
+---
+
+<section id="experience" class="section bg-slate-50 dark:bg-slate-900/40">
+  <div class="container-page">
+    <SectionHeading
+      eyebrow="Experience"
+      title="Where I've built things."
+      description="From network operations to financial services to consulting on Azure and AI."
+    />
+
+    <ol class="relative ml-3 border-l border-slate-200 dark:border-slate-800">
+      {experience.map(({ data }, index) => (
+        <li class="mb-10 ml-8 last:mb-0">
+          <span
+            class:list={[
+              'absolute -left-[9px] mt-2 flex h-4 w-4 items-center justify-center rounded-full ring-4 ring-slate-50 dark:ring-slate-950',
+              index === 0 ? 'bg-accent-500' : 'bg-slate-300 dark:bg-slate-700',
+            ]}
+            aria-hidden="true"
+          />
+          <article class="card p-6">
+            <header class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h3 class="text-lg font-semibold">
+                  {data.url ? (
+                    <a href={data.url} target="_blank" rel="noopener" class="hover:text-accent-600 dark:hover:text-accent-400">{data.company}</a>
+                  ) : (
+                    data.company
+                  )}
+                </h3>
+                <p class="mt-0.5 text-sm text-slate-500 dark:text-slate-400">{data.overview}</p>
+              </div>
+              <div class="flex shrink-0 flex-col gap-1 text-xs text-slate-500 sm:items-end dark:text-slate-400">
+                <span class="inline-flex items-center gap-1.5"><Icon name="calendar" size={14} /> {span(data.positions)}</span>
+                <span class="inline-flex items-center gap-1.5"><Icon name="map-pin" size={14} /> {data.location}</span>
+              </div>
+            </header>
+
+            <div class="mt-5 space-y-6">
+              {data.positions.map((position) => (
+                <div>
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h4 class="font-semibold text-slate-900 dark:text-white">{position.title}</h4>
+                    <span class="text-xs font-medium text-slate-500 dark:text-slate-400">{position.start} – {position.end ?? 'Present'}</span>
+                  </div>
+                  <ul class="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-slate-600 marker:text-accent-500 dark:text-slate-400">
+                    {position.bullets.map((bullet) => <li>{bullet}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </article>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
